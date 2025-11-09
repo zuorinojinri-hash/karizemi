@@ -1,0 +1,331 @@
+@charset "UTF-8";
+
+/* 共通部分
+------------------------------- */
+html {
+    font-size: 100%;
+}
+body{
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", sans-serif;
+    line-height: 1.7;
+    color: black;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+@font-face {
+    font-family: "AinoteFont";
+    src: url("fonts/AinoteFont.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+.font-Ainote {
+    font-family: "AinoteFont", sans-serif;
+}
+
+/*レイアウト*/
+.wrapper {
+    max-width: 1120px;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+.align-center {
+    text-align: center;
+}
+
+/* ボタン */
+.btn {
+    display: inline-block;
+    font-size: 1.5rem;
+    background-color: #C0A313;
+    color: #fff;
+    border-radius: 8px;
+    padding: .75rem 1.5rem;
+    transition: .5s;
+}
+.btn:hover {
+    background-color: #C8A978;
+}
+
+/*ヘッダー*/
+.page-header {
+    background-color: #fff;
+    padding-top: .5rem;
+    border-bottom: 2px solid #c9c2bc;
+}
+
+.head a {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: black;
+}
+.head a:hover {
+    color: #C0A313;
+}
+.logo {
+    height: 3em;
+    width: auto;
+    vertical-align: middle;
+}
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1,2;
+}
+.logo-top {
+    font-size: 1rem;
+}
+.logo-btm {
+    font-size: 2.5rem;
+}
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    font-size: 1.5rem;
+    list-style: none;
+}
+.main-nav a {
+    color: black;
+}
+.main-nav a:hover {
+    color: #C0A313;
+}
+
+/*見出し*/
+.font-english {
+    font-family: 'Philosopher', sans-serif;
+    font-weight: normal;
+}
+.page-title,
+.heading-large,
+.heading-medium {
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem;
+}
+.page-title {
+    margin-top: 2rem;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.4;
+    background-image: url("../images/2616620.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.heading-large {
+    margin-bottom: 1rem;
+}
+
+
+/*ホーム*/
+.about {
+    max-width: 736px;
+    padding: 0 1.5rem;
+    margin: 3rem auto 0;
+}
+.about p {
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+/*ニュース*/
+.news {
+    max-width: 736px;
+    margin: 3rem auto 0;
+    
+    border: 2px solid #ccc;/* 枠線 */
+    border-radius: 8px;    /* 角を少し丸く */
+    padding: 1rem;         /* 内側の余白 */
+    overflow-y: auto;      /* ← 縦方向にだけスクロールを出す */
+    background-color: #fafafa; /* 背景色 */
+}
+.news-title {
+    border-bottom: 1px solid #c9c2bc;
+}
+
+/*詳細*/
+.detail {
+  text-align: center;        /* 全体を中央揃え */
+  max-width: 800px;          /* 横幅を制限（読みやすく） */
+  margin: 2rem auto;           /* 上下に余白＋中央寄せ */
+  padding: 1.5rem;
+  line-height: 1.8;
+}
+.detail-title {
+  display: block;            /* 上下に分けて表示 */
+  font-size: 1.8rem;         /* 少し大きめに */
+  font-weight: bold;
+  /*color: #607133;*/            /* 少し落ち着いた色（りゼミのトーンに合わせ） */
+  margin-bottom: 0.8rem;     /* 下に少し余白 */
+  background-color: #91B825;
+  border-radius: 8px;   
+}
+.detail-text {
+  display: block;
+  font-size: 1.2rem;
+  /*color: #333;*/
+}
+.detail-text a {
+    color: #2A91D3;
+}
+.detail-text a:hover {
+    color: #2A91D3;
+}
+
+/*歴史*/
+.archive {
+    width: 100%;
+    max-width: 544px;
+    margin: auto;
+    padding: 0 1.5rem;
+    font-size: 1rem;
+    border-spacing: 0;
+}
+.archive td {
+    border-bottom: 1px solid #c9c2bc;
+}
+#archive {
+  display: flex;              /* 横並びに */
+  flex-wrap: wrap;            /* 折り返し可能に */
+  justify-content: center;    /* 中央寄せ */
+  gap: 1.5rem;                /* 各カードの間隔 */
+  margin-top: 2rem;
+}
+
+.archive {
+  border-collapse: separate;
+  border-spacing: 1.5rem 2rem;
+  width: 100%;
+  margin: auto;
+}
+
+.archive tbody {
+  display: inline-block;
+  background: #f9f9f9;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem 1.5rem;
+  vertical-align: top;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* hover時に少し浮く */
+.archive tbody:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.archive th {
+  text-align: left;
+  font-weight: normal;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  border: none;
+}
+
+.archive th:first-child {
+  font-size: 1.4rem;
+  color: #607133;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/*フッター*/
+.page-footer {
+    background-color: #607133;
+    color:white;
+}
+.info {
+    width: 100%;
+    max-width: 544px;
+    margin: auto;
+    padding: 0 1.5rem;
+    font-size: 1.5rem;
+    border-spacing: 0;
+}
+.info th,
+.info td {
+    border-bottom: 1px solid #c9c2bc;
+}
+.info th {
+    text-align: center;
+    font-weight: normal;
+    padding: 1rem;
+    gap: 2rem;
+}
+.info td {
+    padding: 1rem 0;
+}
+.info a {
+    color: #fff;
+}
+.info a:hover {
+    color: #C8A978;
+}
+.sns img {
+    height: 1.5em;
+    vertical-align: middle;
+}
+
+.copyright {
+    background-color: #596144;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 6rem;
+    color: #fff; 
+}
+
+/*デスクトップ版*/
+@media (min-width: 800px) {
+    /* 見出し */
+    .page-title {
+        font-size: 3rem;
+    }
+    .heading-large {
+        font-size: 3rem;
+    }
+    /* ヘッダー */
+    .page-header {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1.5rem;
+    }
+    .page-title {
+        height: 70vh;
+        font-size: 4rem;
+    }
+    .container {
+        display: flex;           /* 横並びにする */
+        justify-content: center; /* 横方向の中央寄せ */
+        align-items: flex-start; /* 高さを上に揃える */
+        gap: 1rem;               /* 各ボックスの間隔 */
+        flex-wrap: wrap;         /* 画面が狭いときは折り返す */
+    }
+
+    .container section {
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        padding: 1rem;
+        width: 400px;            /* 各セクションの横幅 */
+
+    }
+
+    .main-nav {
+        font-size: 2rem;
+    }
+    
+    /*フッター*/
+}
