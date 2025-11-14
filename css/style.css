@@ -44,6 +44,7 @@ img {
     color: #fff;
     border-radius: 8px;
     padding: .75rem 1.5rem;
+    margin-bottom: 2rem;
     transition: .5s;
 }
 .btn:hover {
@@ -105,7 +106,7 @@ img {
 }
 
 .menu_line {
-  background: #91B825;
+  background: black;
   border-radius: 6px;
   width: 120%;
   height: 5px;
@@ -129,20 +130,24 @@ img {
 
 .main-nav {
     justify-content: center;
-    gap: 2.5rem;
-    font-size: 1.5rem;
+    gap: 4rem;
+    font-size: 1.7rem;
     list-style: none;
     background: #c9c2bc;
+    background-image: none/*url("../images/Gx6Z6pIbMAAbvJa.jpg")*/;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 10px;
     width: 100%;
-    height: 100vh;
-    padding: 80px 0 0 0;
+    height: 40vh;
+    padding: 40px 0 0 0;
     position: fixed;
     top: 0;
     right: -100%;
     transition: .5s;
     display: block;
     text-align: center;
-    opacity: 0.9;
+    opacity: 0.97;
 }
 .main-nav a {
     color: black;
@@ -175,8 +180,8 @@ img {
     justify-content: center;
     line-height: 1.4;
     background-image: url("../images/2616620.jpg");
-    background-repeat: no-repeat;
     background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
 }
 .heading-large {
@@ -189,6 +194,7 @@ img {
     max-width: 736px;
     padding: 0 1.5rem;
     margin: 3rem auto 0;
+    text-align: center;
 }
 .about p {
     margin-bottom: 3rem;
@@ -202,7 +208,7 @@ img {
     margin: 3rem auto 0;
     
     border: 2px solid #ccc;/* 枠線 */
-    border-radius: 8px;    /* 角を少し丸く */
+    border-radius: 10px;    /* 角を少し丸く */
     padding: 1rem;         /* 内側の余白 */
     overflow-y: auto;      /* ← 縦方向にだけスクロールを出す */
     background-color: #fafafa; /* 背景色 */
@@ -342,7 +348,7 @@ img {
     background-color: #596144;
     text-align: center;
     padding: 2rem 0;
-    margin-top: 6rem;
+    margin-top: 4rem;
     color: #fff; 
 }
 
@@ -370,8 +376,11 @@ img {
         height: 70vh;
         font-size: 4rem;
     }
+    .main-menu {
+        display: none;
+    }
     .container {
-        display: flex;           /* 横並びにする */
+           /* 横並びにする */
         justify-content: center; /* 横方向の中央寄せ */
         align-items: flex-start; /* 高さを上に揃える */
         gap: 1rem;               /* 各ボックスの間隔 */
