@@ -217,6 +217,16 @@ img {
     border-bottom: 1px solid #c9c2bc;
 }
 
+
+/*Twitter*/
+.timeline {
+  max-width: 50%;
+  border: 1px solid #333;
+  margin: 10px auto 0;
+  
+
+}
+
 /*詳細*/
 .detail {
   text-align: center;        /* 全体を中央揃え */
@@ -309,7 +319,7 @@ img {
 
 /*フッター*/
 .page-footer {
-    background-color: #607133;
+    background-color: #91b825;
     color:white;
 }
 .info {
@@ -322,7 +332,7 @@ img {
 }
 .info th,
 .info td {
-    border-bottom: 1px solid #c9c2bc;
+    border-bottom: 2px solid #cfc4bb;
 }
 .info th {
     text-align: center;
