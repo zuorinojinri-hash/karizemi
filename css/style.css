@@ -62,7 +62,7 @@ img {
     padding-top: 1rem;
     padding-bottom: 1rem;
     border-bottom: 2px solid #c9c2bc;
-    position: sticky;
+    position: static;
     top: 0;
     z-index: 1000;
 }
