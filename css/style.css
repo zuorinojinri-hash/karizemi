@@ -59,7 +59,7 @@ img {
 /*ヘッダー*/
 .page-header {
     background-color: #fff;
-    padding-top: .5rem;
+    padding-top: 1rem;
     padding-bottom: 1rem;
     border-bottom: 2px solid #c9c2bc;
     position: sticky;
@@ -333,6 +333,7 @@ img {
 
 .history-title {
     max-width: 650px;
+    width: 90%;
     font-size: 5rem;
     text-align: center;
     -webkit-text-stroke: 1px black;
@@ -369,7 +370,7 @@ img {
 
 .comingsoon {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 4rem;
 }
 
