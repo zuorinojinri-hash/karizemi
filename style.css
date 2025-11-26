@@ -1,0 +1,515 @@
+@charset "UTF-8";
+
+/* 共通部分
+------------------------------- */
+html {
+    font-size: 100%;
+}
+body{
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", sans-serif;
+    line-height: 1.7;
+    color: black;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+@font-face {
+    font-family: "AinoteFont";
+    src: url("./fonts/AinoteFont.otf") format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+.font-Ainote {
+    font-family: "AinoteFont", sans-serif;
+}
+.kaisei-opti-regular {
+  font-family: "Kaisei Opti", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*レイアウト*/
+.wrapper {
+    max-width: 1120px;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+.align-center {
+    text-align: center;
+}
+
+/* ボタン */
+.btn {
+    display: inline-block;
+    font-size: 1.5rem;
+    background-color: #C0A313;
+    color: #fff;
+    border-radius: 8px;
+    padding: .75rem 1.5rem;
+    margin-bottom: 2rem;
+    transition: .5s;
+}
+.btn:hover {
+    background-color: #C8A978;
+}
+
+/*ヘッダー*/
+.page-header {
+    background-color: #fff;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #c9c2bc;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
+}
+.head {
+    display:  flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.head a {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: black;
+}
+.head a:hover {
+    color: #C0A313;
+}
+.logo {
+    height: 2.5em;
+    width: auto;
+    vertical-align: middle;
+}
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1,2;
+}
+.logo-top {
+    font-size: 0.6rem;
+}
+.logo-btm {
+    font-size: 2.5rem;
+}
+
+/* Responsive menu button */
+.responsive_btn {
+  display: fixed;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin: 0 1rem 0 1rem;
+  cursor: pointer;
+  z-index: 2000;
+  position:fixed;
+  right: 16px;
+  transition: 0.3s;
+}
+.menu_line {
+  background: black;
+  border-radius: 4px;
+  width: 100%;
+  height: 5px;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* ボタン ON（active）時の変化 */
+.responsive_btn.active .menu_line:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.responsive_btn.active .menu_line:nth-child(2) {
+  opacity: 0;
+}
+.responsive_btn.active .menu_line:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Responsive style */
+.responsive_btn {
+    display: fixed;
+    position: fixed;
+}
+.header_bg {
+    position: relative;
+}
+.header_nav_lists li {
+    margin: 0 0 40px;
+    text-align: center;
+}
+.main-top {
+    font-size: 1.5rem;
+    margin: 1rem 2rem 0 0;
+}
+.main-sns {
+    margin-top: 2rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid gray;
+    text-align: center;
+}
+.main-sns img {
+    height: 2rem;
+    vertical-align: middle;
+    margin-right: 1rem;
+}
+.main-nav {
+    justify-content: center;
+    gap: 4rem;
+    font-size: 1.5rem;
+    list-style: none;
+    background: #fffcf9;
+    background-image: none/*url("../images/Gx6Z6pIbMAAbvJa.jpg")*/;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    border: 2px solid black;
+    width: 60%;
+    /*height: 70%;*/
+    padding: 40px 0 0 0;
+    margin-top: 0;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    transition: .5s;
+    display: block;
+    text-align: center;
+    opacity: 0.97;
+}
+.main-nav a {
+    color: black;
+}
+.main-nav a:hover {
+    color: #C0A313;
+}
+.main-nav.menu_active {
+    right: 0;
+}
+.main-nav li {
+    margin: 1rem 2rem 1rem 0;
+}
+
+/*見出し*/
+.font-english {
+    font-family: 'Philosopher', sans-serif;
+    font-weight: normal;
+}
+.page-title,
+.heading-large,
+.heading-medium {
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem;
+}
+.page-title {
+    margin-top: 2rem;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.4;
+    background-image: url("../images/2616620.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.heading-large {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #C8A978;
+}
+
+/*ホーム*/
+.about {
+    max-width: 680px;
+    padding: 0.2rem;
+    margin: 2rem auto 0;
+    text-align: center;
+}
+.about p {
+    margin: 2rem 0 2rem 0;
+}
+.about-text {
+    display: block;
+}
+
+/*ニュース*/
+.news {
+    max-width: 736px;
+    justify-content: center;
+    margin: 1rem;
+    border: 2px solid #ccc;/* 枠線 */
+    border-radius: 10px;    /* 角を少し丸く */
+    padding: 1rem;         /* 内側の余白 */
+    overflow-y: auto;      /* ← 縦方向にだけスクロールを出す */
+    background-color: #fafafa; /* 背景色 */
+}
+.news-title {
+    border-bottom: 1px solid #c9c2bc;
+    margin: 0;
+}
+.news li {
+    list-style: none;
+}
+.news ul {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+/*Twitter*/
+
+/*詳細*/
+.detail {
+  text-align: center;        /* 全体を中央揃え */
+  max-width: 800px;          /* 横幅を制限（読みやすく） */
+  margin: 2rem auto;           /* 上下に余白＋中央寄せ */
+  padding: 1.5rem;
+  line-height: 1.8;
+}
+.detail-title {
+  display: block;            /* 上下に分けて表示 */
+  font-size: 1.8rem;         /* 少し大きめに */
+  font-weight: bold;
+  /*color: #607133;*/            /* 少し落ち着いた色（りゼミのトーンに合わせ） */
+  margin-bottom: 0.8rem;     /* 下に少し余白 */
+  background-color: #bed778;
+  border-radius: 8px;   
+}
+.detail-text {
+  display: block;
+  font-size: 1rem;
+  padding-top: 1rem;
+  /*color: #333;*/
+}
+.detail-text a {
+    color: #2A91D3;
+}
+.detail-text a:hover {
+    color: #2A91D3;
+}
+
+/*歴史*/
+.archive {
+    width: 100%;
+    max-width: 544px;
+    margin: auto;
+    padding: 0 1.5rem;
+    font-size: 1rem;
+    border-spacing: 0;
+}
+.archive td {
+    border-bottom: 1px solid #c9c2bc;
+}
+.archive {
+  display: flex;              /* 横並びに */
+  flex-wrap: wrap;            /* 折り返し可能に */
+  justify-content: center;    /* 中央寄せ */
+  gap: 1.5rem;                /* 各カードの間隔 */
+  margin-top: 2rem;
+}
+.archive {
+  border-collapse: separate;
+  border-spacing: 1.5rem 2rem;
+  width: 100%;
+  margin: auto;
+}
+.archive tbody {
+  display: inline-block;
+  background: #f9f9f9;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem 1.5rem;
+  vertical-align: top;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.history-title {
+    max-width: 650px;
+    width: 90%;
+    font-size: 5rem;
+    text-align: center;
+    -webkit-text-stroke: 1px black;
+    margin: 2rem auto ;
+    padding: 0 1rem 0 1rem;
+    border: 2px solid black;
+    color: white;
+}
+.r1 {
+    /*background-image: url(..//images/1st_1.jpg);*/
+    background :linear-gradient(rgba(0, 0, 0, .4),  rgba(0, 0, 0, .4)),url(..//images/1st_1.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.r2 {
+    background :linear-gradient(rgba(0, 0, 0, .4),  rgba(0, 0, 0, .4)),url(..//images/2nd_1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.r3 {
+    background :linear-gradient(rgba(0, 0, 0, .4),  rgba(0, 0, 0, .4)),url(..//images/3rd_1.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.r4 {
+    background :linear-gradient(rgba(0, 0, 0, .4),  rgba(0, 0, 0, .4)),url(..//images/4th_1.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.comingsoon {
+    text-align: center;
+    font-size: 1rem;
+    margin: 4rem;
+}
+
+/*フッター*/
+.page-footer {
+    background-color: #91b825;
+    color:white;
+}
+.foot-title {
+    margin: 1rem auto 0;
+    text-align: center;
+    font-size: 1.7rem;    
+}
+.info {
+    width: 100%;
+    max-width: 544px;
+    margin: auto;
+    padding: 0 1.5rem;
+    font-size: 1.5rem;
+    border-spacing: 0;
+}
+.info th,
+.info td {
+    border-bottom: 2px solid #cfc4bb;
+}
+.info th {
+    text-align: center;
+    font-weight: normal;
+    padding: 1rem;
+    gap: 2rem;
+}
+.info td {
+    padding: 1rem 0;
+}
+.info a {
+    color: #fff;
+}
+.info a:hover {
+    color: #C8A978;
+}
+.sns img {
+    height: 1.5em;
+    vertical-align: middle;
+}
+.copyright {
+    background-color: #596144;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+    color: #fff; 
+}
+
+/*デスクトップ版*/
+@media (min-width: 800px) {
+    /* 見出し */
+    .page-title {
+        font-size: 2rem;
+    }
+    .heading-large {
+        font-size: 2rem;
+    }
+    /* ヘッダー */
+    .page-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1.5rem;
+        border-bottom: 2px solid #c9c2bc;
+    }
+    .logo {
+    height: 3em;
+    }
+    .logo-top {
+        font-size: 1rem;
+    }
+    .page-title {
+        height: 70vh;
+        font-size: 4rem;
+    }
+
+    /*NEWS*/
+    .news {
+        margin: 2rem auto 0;
+    }
+    .news ul {
+        padding-left: 2rem;
+    }
+
+    /*Twitter*/
+
+    .main-menu {
+        display: none;
+    }
+    .container {
+           /* 横並びにする */
+        justify-content: center; /* 横方向の中央寄せ */
+        align-items: flex-start; /* 高さを上に揃える */
+        gap: 1rem;               /* 各ボックスの間隔 */
+        flex-wrap: wrap;         /* 画面が狭いときは折り返す */
+    }
+    .main-sns {
+        display: none;
+    }
+
+    .container section {
+        
+        border-radius: 8px;
+        padding: 1rem;
+        width: 650px;            /* 各セクションの横幅 */
+
+    }
+    .main-nav {
+    position: static;          /* 固定解除 */
+    height: auto;
+    width: auto;
+    background: none;
+    display: flex;             /* 横並びに */
+    justify-content: center;
+    gap: 2.5rem;
+    font-size: 1.5rem;
+    padding: 0;
+    transition: none;
+    color: #91B825;
+    border: none;
+    font-size: 2rem;
+    margin-bottom: 0;
+    }
+    .main-nav li {
+        margin: 0;
+    }
+    .responsive_btn {
+    display: none;
+    }
+
+    .about-text {
+        display: inline;
+    }
+    
+    
+    /*フッター*/
+}
