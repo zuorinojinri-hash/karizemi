@@ -26,6 +26,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap" rel="stylesheet">
 
     <!-- オリジナルCSSとjavascript-->
+        <link rel="stylesheet" href="./slick/slick.css">
+        <link rel="stylesheet" href="./slick/slick-theme.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     
@@ -34,16 +36,17 @@
             <h1 class="align-center head">
                 <a href="index.html"><img class="logo" src="images\りゼミアイコン.png" alt="りゼミ　ホーム">
                     <div class="logo-text">
-                        <span class="logo-top">高専生・大学生・大学院生のための自主ゼミ合宿</span>
+                        <span class="logo-top">高専生・大学生・大学院生のための<span class="about-text">自主ゼミ合宿</span></span>
                         <span class="logo-btm">りゼミ</span>
                     </div>
-                    </a>
+                </a>
                 <div class="responsive_btn">
                     <div class="menu_line"></div>
                     <div class="menu_line"></div>
                     <div class="menu_line"></div>
-                 </div>
+                </div>
             </h1>
+
             <nav>
                 <ul class="main-nav kaisei-opti-regular">
                     <div class="main-menu main-top">MENU</div>
@@ -58,8 +61,17 @@
                 </ul>
             </nav>
         </header>
-
-        <h2 class="page-title kaisei-opti-regular">自主ゼミ合宿<br>りゼミ</h2>
+        
+        <div class="your-class">
+          <div><img src="./images/1st/1st_1.jpg"></div>
+          <div><img src="./images/1st/1st_2.jpg"></div>
+          <div><img src="./images/2nd/2nd_4.jpg"></div>
+          <div><img src="./images/2nd/2nd_2.jpg"></div>
+          <div><img src="./images/3rd/3rd_2.jpg"></div>
+          <div><img src="./images/3rd/3rd_3.jpg"></div>
+          <div><img src="./images/4th/4th_2.jpg"></div>
+          <div><img src="./images/4th/4th_5.jpg"></div>
+        </div>
 
         <section class="news">
             <h2 class="news-title">News</h2>
@@ -72,21 +84,6 @@
                 </li>
                 <li>2025.11.07<br>りゼミ公式ホームページができました</li>
             </ul>
-        </section>
-        
-        <section class="about">
-            <h3 class="heading-large"> りゼミとは</h3>
-            <p>
-                りゼミは高専生・大学生・大学院生を対象とした<span class="about-text">自主ゼミをする合宿を主催しています。</span><br>
-                自分のやりたい分野や読みたい本で人をあつめて<span class="about-text">ゼミをすることができます。</span>
-            </p>
-
-            <h3 class="heading-large">自主ゼミとは</h3>
-            <p>
-                自主ゼミとは学生が自主的に行う勉強会です。<br>
-                <br>
-                1つの本を担当分けして順番に読む輪読形式や,<span class="about-text">ある1つの分野について具体的な話題を発表する</span>発表会形式など様々な方法があります。
-            </p>
         </section>
 
         <footer class="page-footer kaisei-opti-regular">
@@ -105,5 +102,28 @@
             </div>
         </footer>
     <script src="js/master.js"></script> 
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $('.your-class').slick({
+            dots: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+          });
+       });
+    </script>
     </body>
 </html>
