@@ -271,8 +271,6 @@ img {
     margin-bottom: 0;
 }
 
-/*Twitter*/
-
 /*詳細*/
 .detail {
   text-align: center;        /* 全体を中央揃え */
@@ -380,6 +378,87 @@ img {
     text-align: center;
     font-size: 1rem;
     margin: 4rem;
+}
+
+/*各回のページ*/
+.rizemi-detail {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+.detail-card {
+  background: #fafafa;
+  border-radius: 12px;
+  border: 2px solid #ddd;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 0;
+  font-size: 1.1rem;
+}
+.detail-item:last-child {
+  border-bottom: none;
+}
+.label {
+  font-weight: bold;
+  color: #555;
+}
+.value {
+  color: #000;
+}
+
+/* アコーディオン（ゼミ班） */
+.seminars {
+  margin: 3rem auto;
+  padding: 1rem;
+}
+.accordion {
+  max-width: 550px;   /* 好きな幅 */
+  margin: 0 auto;     /* ← これが中央寄せの決め手 */
+}
+.accordion-item {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  background: #fff;
+}
+.accordion-header {
+  width: 100%;
+  background: #91b825;
+  color: #fff;
+  padding: 1rem 1.2rem;
+  font-size: 1.5rem;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.accordion-icon {
+  font-size: 1.4rem;
+  transition: transform 0.3s ease;
+}
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  background: #fafafa;
+  padding: 0 1.2rem;
+  transition: max-height 0.4s ease;
+  line-height: 1.7;
+}
+.accordion-item.active .accordion-content {
+  padding: 1rem 1.2rem;
+}
+.accordion-item.active .accordion-icon {
+  transform: rotate(45deg); /* ＋ → × */
 }
 
 /*フッター*/
