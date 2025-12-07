@@ -251,8 +251,10 @@ img {
 /*ニュース*/
 .news {
     max-width: 736px;
+    width: 80%;
+    max-height: 300px;
     justify-content: center;
-    margin: 1rem;
+    margin: 1rem auto;
     border: 2px solid #ccc;/* 枠線 */
     border-radius: 10px;    /* 角を少し丸く */
     padding: 1rem;         /* 内側の余白 */
@@ -265,6 +267,7 @@ img {
 }
 .news li {
     list-style: none;
+    border-bottom: 1px solid #c9c2bc;
 }
 .news ul {
     padding-left: 0;
@@ -301,42 +304,7 @@ img {
     color: #2A91D3;
 }
 
-/*歴史*/
-.archive {
-    width: 100%;
-    max-width: 544px;
-    margin: auto;
-    padding: 0 1.5rem;
-    font-size: 1rem;
-    border-spacing: 0;
-}
-.archive td {
-    border-bottom: 1px solid #c9c2bc;
-}
-.archive {
-  display: flex;              /* 横並びに */
-  flex-wrap: wrap;            /* 折り返し可能に */
-  justify-content: center;    /* 中央寄せ */
-  gap: 1.5rem;                /* 各カードの間隔 */
-  margin-top: 2rem;
-}
-.archive {
-  border-collapse: separate;
-  border-spacing: 1.5rem 2rem;
-  width: 100%;
-  margin: auto;
-}
-.archive tbody {
-  display: inline-block;
-  background: #f9f9f9;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 1rem 1.5rem;
-  vertical-align: top;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
+/*りゼミの歴史*/
 .history-title {
     max-width: 650px;
     width: 90%;
@@ -379,7 +347,6 @@ img {
     background-repeat: no-repeat;
     background-position: center;
 }
-
 .comingsoon {
     text-align: center;
     font-size: 1rem;
