@@ -485,7 +485,7 @@ img {
 }
 
 /*デスクトップ版*/
-@media (min-width: 850px) {
+@media (min-width: 800px) {
     /* 見出し */
     .page-title {
         font-size: 2rem;
@@ -575,4 +575,5 @@ img {
     
     
     /*フッター*/
+
 }
