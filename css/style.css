@@ -280,6 +280,9 @@ body.r5-sp {
 }
 
 /*ゼミ班*/
+.speace-sp {
+  margin: rem auto 0;
+}
 .zemi-sp {
   width: 90%;
   max-width: 800px;
@@ -292,13 +295,16 @@ body.r5-sp {
   padding-bottom: 1rem;
 }
 .zemi-title-sp {
+  max-width: 800px;
+    width: 90%;
   caption-side: top;
   text-align: left;
   font-size: 1.5rem;
   font-weight: bold;
   letter-spacing: 2px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 15px;
-  margin-left: 1.5rem;
   color: #cecece;
   position: relative;
 }
@@ -320,15 +326,23 @@ body.r5-sp {
   color: #cecece;
   padding: 1rem 1.2rem;
   text-align: center;
-  border: none;
   cursor: pointer;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   align-items: center;
 }
+.accordion-header-sp:not(:last-child) {
+  border-bottom: 1px solid #cecece;
+}
 .accordion-icon-sp {
-  transition: transform 0.3s ease;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #cecece;  /* ＞ の右側ライン */
+    border-bottom: 2px solid #cecece; /* ＞ の下側ライン */
+    transform: rotate(45deg);      /* ＞ を下向きに倒した形に */
+    transition: transform 0.3s ease;
 }
 .accordion-content-sp {
   max-height: 0;
@@ -341,13 +355,22 @@ body.r5-sp {
   padding: 1rem 1.2rem;
 }
 .accordion-item-sp.active .accordion-icon-sp {
-  transform: rotate(45deg); /* ＋ → × */
+  transform: rotate(225deg); /* ＋ → × */
 }
 .zemi-detail-top {
     font-size: 1.2rem;
 }
 .zemi-detail-text {
     margin: 1rem;
+}
+.zemi-detail-text p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.zemi-detail-text div {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
 }
 /*EVENT*/
 .event-sp {
@@ -360,6 +383,19 @@ body.r5-sp {
   border-bottom: 2px solid #cecece;
   padding-left: 20px;
   padding-bottom: 1rem;
+}
+.enent-sp img {
+    width: 60%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* 中央揃えしたい場合 */
+}
+.event-sp blockquote {
+    font-size: 0.8rem;
+    margin: 0.5rem;
+}
+.event-sp cite a {
+    color: #e3acae;
 }
 
 /*上に戻るボタン*/
@@ -955,6 +991,8 @@ body.r5-sp {
     .about-text {
         display: inline;
     }
+    
+    /*特設ページ*/
     
     
     /*フッター*/
